@@ -1,16 +1,133 @@
 // import fonte Nunito
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
+// vars
+// colors
+$main-color: #8e44ad;
+$red: #e74c3c;
+$orange: #f39c12;
+$white: #fff;
+$black: #2c3e50;
+$light-color: #888;
+$light-bg: #eee;
+// borders
+$border: .1rem solid rgba(0,0,0, .2);
+
 // reset
 * {
   font-family: 'Nunito', sans-serif;
   margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
   text-decoration: none;
-  list-style: none;
+
+  &::selection {
+    background-color: $main-color;
+    color: $white;
+  }
+
+  &::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $main-color;
+  }
 }
 
-// vars
-$main-color: #8e44ad;
+// base html
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $light-bg;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// header
+.header {
+  background-color: $white;
+  border-bottom: $border;
+  position: sticky;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+
+  .flex {
+    padding: 1.5rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 2.5rem;
+      color: $black;
+      font-weight: bold;
+    }
+
+    .search-form {
+      width: 50rem;
+      border-radius: .5rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 1.5rem 2rem;
+      background-color: $light-bg;
+
+      input {
+        width: 100%;
+        background: none;
+        font-size: 1.8rem;
+        color: $black;
+      }
+
+      button {
+        font-size: 2rem;
+        color: $black;
+        cursor: pointer;
+        background: none;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+
+    .icons {
+      div {
+        font-size: 2rem;
+        color: $black;
+        border-radius: .5rem;
+        height: 4.5rem;
+        cursor: pointer;
+        width: 4.5rem;
+        line-height: 4.4rem;
+        background-color: $light-bg;
+        text-align: center;
+        margin-left: .5rem;
+
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+
 
 
 /*# sourceMappingURL=style.scss.map */

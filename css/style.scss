@@ -56,6 +56,54 @@ section {
   margin: 0 auto;
 }
 
+.btn,
+.option-btn,
+.delete-btn,
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn {
+  border-radius: .5rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  color: $white;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+.btn,
+.option-btn,
+.delete-btn {
+  display: block;
+  width: 100%;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn {
+  display: inline-block;
+}
+
+.btn,
+.inline-btn {
+  background-color: $main-color;
+}
+
+.option-btn,
+.inline-option-btn {
+  background-color: $orange;
+}
+
+.delete-btn,
+.inline-delete-btn {
+  background-color: $red;
+}
+
 // header
 .header {
   background-color: $white;
@@ -122,6 +170,39 @@ section {
           background-color: $black;
           color: $white;
         }
+      }
+
+      #search-btn {
+        display: none;
+      }
+    }
+
+    .profile {
+      position: absolute;
+      top: 120%;
+      right: 2rem;
+      background-color: $white;
+      border-radius: .5rem;
+      padding: 2rem;
+      text-align: center;
+      width: 30rem;
+
+      img {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: .5rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: $black;
+      }
+
+      span {
+        color: $light-color;
+        font-size: 1.6rem;
       }
     }
   }

@@ -38,6 +38,58 @@ section {
   margin: 0 auto;
 }
 
+.btn,
+.option-btn,
+.delete-btn,
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn {
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  color: #fff;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+}
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover,
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.btn,
+.option-btn,
+.delete-btn {
+  display: block;
+  width: 100%;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn {
+  display: inline-block;
+}
+
+.btn,
+.inline-btn {
+  background-color: #8e44ad;
+}
+
+.option-btn,
+.inline-option-btn {
+  background-color: #f39c12;
+}
+
+.delete-btn,
+.inline-delete-btn {
+  background-color: #e74c3c;
+}
+
 .header {
   background-color: #fff;
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
@@ -98,6 +150,34 @@ section {
 .header .flex .icons div:hover {
   background-color: #2c3e50;
   color: #fff;
+}
+.header .flex .icons #search-btn {
+  display: none;
+}
+.header .flex .profile {
+  position: absolute;
+  top: 120%;
+  right: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  width: 30rem;
+}
+.header .flex .profile img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.header .flex .profile h3 {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+.header .flex .profile span {
+  color: #888;
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.scss.map */

@@ -65,6 +65,7 @@ section {
   border-radius: .5rem;
   padding: 1rem 3rem;
   font-size: 1.8rem;
+  margin-top: 1rem;
   color: $white;
   text-transform: capitalize;
   cursor: pointer;
@@ -102,6 +103,11 @@ section {
 .delete-btn,
 .inline-delete-btn {
   background-color: $red;
+}
+
+.flex-btn {
+  display: flex;
+  gap: 1rem;
 }
 
 // header
@@ -186,6 +192,9 @@ section {
       padding: 2rem;
       text-align: center;
       width: 30rem;
+      transform: scale(0);
+      transform-origin: top right;
+      transition: .2s linear;
 
       img {
         height: 10rem;
@@ -204,7 +213,57 @@ section {
         color: $light-color;
         font-size: 1.6rem;
       }
+
+      &.active {
+        transform: scale(1);
+      }
     }
+  }
+}
+
+
+
+
+
+
+// Media Queries
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .flex {
+      .search-form {
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        width: auto;
+        border-top: $border;
+        border-bottom: $border;
+        background-color: $white;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+
+        &.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+      }
+
+      .icons {
+        #search-btn {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
   }
 }
 

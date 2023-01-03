@@ -48,6 +48,12 @@ html {
 
 body {
   background-color: $light-bg;
+  padding-left: 30rem;
+  transition: .2s linear;
+
+  &.active {
+    padding-left: 0;
+  }
 }
 
 section {
@@ -221,12 +227,136 @@ section {
   }
 }
 
+// side bar
+.side-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  width: 30rem;
+  background-color: $white;
+  border-right: $border;
+  transition: .2s linear;
+  z-index: 1200;
 
+  .close-side-bar {
+    text-align: right;
+    padding: 2rem;
+    padding-bottom: 0;
+    display: none;
 
+    i {
+      height: 4.5rem;
+      width: 4.5rem;
+      line-height: 4.4rem;
+      font-size: 2.5rem;
+      color: $white;
+      background-color: $red;
+      cursor: pointer;
+      text-align: center;
+      border-radius: .5rem;
+
+      &:hover {
+        background-color: $black;
+      }
+    }
+  }
+
+  .profile {
+    padding: 3rem 2rem;
+    text-align: center;
+
+    img {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: .5rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: $black;
+    }
+
+    span {
+      color: $light-color;
+      font-size: 1.6rem;
+    }
+  }
+
+  .navbar {
+    a {
+      display: block;
+      padding: 1rem;
+      margin: .5rem 0;
+      font-size: 1.8rem;
+
+      i {
+        color: $main-color;
+        margin-right: 2rem;
+        transition: .2s linear;
+      }
+
+      span {
+        color: $light-color;
+      }
+
+      &:hover {
+        background-color: $light-bg;
+
+        i {
+          margin-right: 2.5rem;
+        }
+      }
+    }
+  }
+
+  &.active {
+    left: -30rem;
+  }
+}
+
+// footer
+.footer {
+  position: sticky;
+  bottom: 0; right: 0; left: 0;
+  background-color: $white;
+  border-top: $border;
+  padding: 2rem;
+  text-align: center;
+  color: $black;
+  font-size: 2rem;
+  margin-top: 2rem;
+  z-index: 1000;
+
+  span {
+    color: $main-color;
+  }
+}
 
 
 
 // Media Queries
+@media (max-width: 1200px) {
+  body {
+    padding-left: 0;
+  }
+
+  .side-bar {
+    transition: .2s linear;
+    left: -30rem;
+
+    .close-side-bar {
+      display: block;
+    }
+
+    &.active {
+      left: 0;
+      box-shadow: 0 0 0 100vw rgba(0,0,0, .7);
+    }
+  }
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;

@@ -116,6 +116,15 @@ section {
   gap: 1rem;
 }
 
+.heading {
+  padding-bottom: 1.8rem;
+  border-bottom: $border;
+  font-size: 2.5rem;
+  color: $black;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
 // header
 .header {
   background-color: $white;
@@ -394,6 +403,15 @@ section {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .flex-btn {
+    flex-flow: column;
+    gap: 0;
+  }
+
+  .heading {
+    font-size: 2rem;
   }
 }
 

@@ -6,12 +6,15 @@
 $main-color: #8e44ad;
 $red: #e74c3c;
 $orange: #f39c12;
-$white: #fff;
-$black: #2c3e50;
-$light-color: #888;
-$light-bg: #eee;
-// borders
-$border: .1rem solid rgba(0,0,0, .2);
+:root {
+  // colors
+  --white: #fff;
+  --black: #2c3e50;
+  --light-color: #888;
+  --light-bg: #eee;
+  // borders
+  --border: .1rem solid rgba(0,0,0, .2);
+}
 
 // reset
 * {
@@ -23,7 +26,7 @@ $border: .1rem solid rgba(0,0,0, .2);
 
   &::selection {
     background-color: $main-color;
-    color: $white;
+    color: var(--white);
   }
 
   &::-webkit-scrollbar {
@@ -47,12 +50,23 @@ html {
 }
 
 body {
-  background-color: $light-bg;
+  background-color: var(--light-bg);
   padding-left: 30rem;
   transition: .2s linear;
 
   &.active {
     padding-left: 0;
+  }
+
+  &.dark {
+    // colors
+    --white: #222;
+    --black: #fff;
+    --light-color: #aaa;
+    --light-bg: #333;
+    // borders
+    --border: .1rem solid rgba(255,255,255, .2);
+
   }
 }
 
@@ -72,14 +86,14 @@ section {
   padding: 1rem 3rem;
   font-size: 1.8rem;
   margin-top: 1rem;
-  color: $white;
+  color: var(--white);
   text-transform: capitalize;
   cursor: pointer;
   text-align: center;
 
   &:hover {
-    background-color: $black;
-    color: $white;
+    background-color: var(--black);
+    color: var(--white);
   }
 }
 
@@ -118,17 +132,17 @@ section {
 
 .heading {
   padding-bottom: 1.8rem;
-  border-bottom: $border;
+  border-bottom: var(--border);
   font-size: 2.5rem;
-  color: $black;
+  color: var(--black);
   text-transform: capitalize;
   margin-bottom: 2rem;
 }
 
 // header
 .header {
-  background-color: $white;
-  border-bottom: $border;
+  background-color: var(--white);
+  border-bottom: var(--border);
   position: sticky;
   top: 0; left: 0; right: 0;
   z-index: 1000;
@@ -142,7 +156,7 @@ section {
 
     .logo {
       font-size: 2.5rem;
-      color: $black;
+      color: var(--black);
       font-weight: bold;
     }
 
@@ -153,18 +167,18 @@ section {
       align-items: center;
       gap: 2rem;
       padding: 1.5rem 2rem;
-      background-color: $light-bg;
+      background-color: var(--light-bg);
 
       input {
         width: 100%;
         background: none;
         font-size: 1.8rem;
-        color: $black;
+        color: var(--black);
       }
 
       button {
         font-size: 2rem;
-        color: $black;
+        color: var(--black);
         cursor: pointer;
         background: none;
 
@@ -177,19 +191,19 @@ section {
     .icons {
       div {
         font-size: 2rem;
-        color: $black;
+        color: var(--black);
         border-radius: .5rem;
         height: 4.5rem;
         cursor: pointer;
         width: 4.5rem;
         line-height: 4.4rem;
-        background-color: $light-bg;
+        background-color: var(--light-bg);
         text-align: center;
         margin-left: .5rem;
 
         &:hover {
-          background-color: $black;
-          color: $white;
+          background-color: var(--black);
+          color: var(--white);
         }
       }
 
@@ -202,7 +216,7 @@ section {
       position: absolute;
       top: 120%;
       right: 2rem;
-      background-color: $white;
+      background-color: var(--white);
       border-radius: .5rem;
       padding: 2rem;
       text-align: center;
@@ -221,11 +235,11 @@ section {
 
       h3 {
         font-size: 2rem;
-        color: $black;
+        color: var(--black);
       }
 
       span {
-        color: $light-color;
+        color: var(--light-color);
         font-size: 1.6rem;
       }
 
@@ -242,8 +256,8 @@ section {
   top: 0; left: 0;
   height: 100vh;
   width: 30rem;
-  background-color: $white;
-  border-right: $border;
+  background-color: var(--white);
+  border-right: var(--border);
   transition: .2s linear;
   z-index: 1200;
 
@@ -258,14 +272,14 @@ section {
       width: 4.5rem;
       line-height: 4.4rem;
       font-size: 2.5rem;
-      color: $white;
+      color: var(--white);
       background-color: $red;
       cursor: pointer;
       text-align: center;
       border-radius: .5rem;
 
       &:hover {
-        background-color: $black;
+        background-color: var(--black);
       }
     }
   }
@@ -284,11 +298,11 @@ section {
 
     h3 {
       font-size: 2rem;
-      color: $black;
+      color: var(--black);
     }
 
     span {
-      color: $light-color;
+      color: var(--light-color);
       font-size: 1.6rem;
     }
   }
@@ -307,11 +321,11 @@ section {
       }
 
       span {
-        color: $light-color;
+        color: var(--light-color);
       }
 
       &:hover {
-        background-color: $light-bg;
+        background-color: var(--light-bg);
 
         i {
           margin-right: 2.5rem;
@@ -325,15 +339,150 @@ section {
   }
 }
 
+// quick-select
+.quick-select .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27.5rem, 1fr));
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+
+  .box {
+    border-radius: .5rem;
+    background-color: var(--white);
+    padding: 2rem;
+
+    .title {
+      font-size: 2rem;
+      color: var(--black);
+    }
+
+    p {
+      line-height: 1.5rem;
+      padding-top: 1.5rem;
+      color: var(--light-color);
+      font-size: 1.8rem;
+
+      span {
+        color: $main-color;
+      }
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1.5rem;
+
+      a {
+        padding: 1rem 1.5rem;
+        border-radius: .5rem;
+        font-size: 1.6rem;
+        background-color: var(--light-bg);
+
+        i {
+          margin-right: 1rem;
+          color: var(--black);
+        }
+
+        span {
+          color: var(--light-color);
+        }
+
+        &:hover {
+          background-color: var(--black);
+
+          i {
+            color: var(--white);
+          }
+
+          span {
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+
+  .tutor {
+    text-align: center;
+
+    p {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+// Courses
+.courses { 
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    .box {
+      border-radius: .5rem;
+      background-color: var(--white);
+      padding: 2rem;
+
+      .tutor {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        img {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        h3 {
+          font-size: 2rem;
+          color: var(--black);
+          margin-bottom: .2rem;
+        }
+
+        span {
+          font-size: 1.5rem;
+          color: var(--light-color);
+        }
+      }
+
+      .thumb {
+        width: 100%;
+        border-radius: .5rem;
+        height: 20rem;
+        object-fit: cover;
+      }
+
+      .title {
+        font-size: 2rem;
+        color: var(--black);
+        margin-top: .5rem;
+        padding: .5rem 0;
+      }
+    }
+  }
+
+  .more-btn {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
 // footer
 .footer {
   position: sticky;
   bottom: 0; right: 0; left: 0;
-  background-color: $white;
-  border-top: $border;
+  background-color: var(--white);
+  border-top: var(--border);
   padding: 2rem;
   text-align: center;
-  color: $black;
+  color: var(--black);
   font-size: 2rem;
   margin-top: 2rem;
   z-index: 1000;
@@ -342,8 +491,6 @@ section {
     color: $main-color;
   }
 }
-
-
 
 // Media Queries
 @media (max-width: 1200px) {
@@ -379,9 +526,9 @@ section {
         position: absolute;
         top: 99%; left: 0; right: 0;
         width: auto;
-        border-top: $border;
-        border-bottom: $border;
-        background-color: $white;
+        border-top: var(--border);
+        border-bottom: var(--border);
+        background-color: var(--white);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: .2s linear;
 

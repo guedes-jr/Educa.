@@ -644,6 +644,165 @@ section {
   color: #8e44ad;
 }
 
+.watch-video .video-details {
+  background-color: var(--white);
+  padding: 2rem;
+}
+.watch-video .video-details .video {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.watch-video .video-details .title {
+  font-size: 2rem;
+  color: var(--black);
+  padding: 1.5rem 0;
+}
+.watch-video .video-details .info {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: var(--border);
+}
+.watch-video .video-details .info p {
+  font-size: 1.6rem;
+}
+.watch-video .video-details .info p i {
+  margin-right: 1rem;
+  color: #8e44ad;
+}
+.watch-video .video-details .info p span {
+  color: var(--light-color);
+}
+.watch-video .video-details .tutor {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.watch-video .video-details .tutor img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.watch-video .video-details .tutor h3 {
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 0.2rem;
+}
+.watch-video .video-details .tutor span {
+  color: var(--light-color);
+  font-size: 1.5rem;
+}
+.watch-video .video-details .flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+.watch-video .video-details .flex a {
+  margin-top: 0;
+}
+.watch-video .video-details .flex button {
+  background-color: var(--light-bg);
+  cursor: pointer;
+  padding: 1rem 2.5rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+}
+.watch-video .video-details .flex button i {
+  color: var(--black);
+  margin-right: 1rem;
+}
+.watch-video .video-details .flex button span {
+  color: var(--light-color);
+}
+.watch-video .video-details .flex button:hover {
+  background-color: var(--black);
+}
+.watch-video .video-details .flex button:hover i {
+  color: var(--white);
+}
+.watch-video .video-details .flex button:hover span {
+  color: var(--white);
+}
+.watch-video .video-details .description {
+  padding-top: 2rem;
+}
+.watch-video .video-details .description p {
+  line-height: 1.5;
+  font-size: 1.7rem;
+  color: var(--light-color);
+  white-space: pre-line;
+}
+
+.comments .add-comments {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+.comments .add-comments textarea {
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  width: 100%;
+  height: 20rem;
+  background-color: var(--light-bg);
+  resize: none;
+  font-size: 2rem;
+  color: var(--black);
+}
+.comments .show-comments {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: grid;
+  gap: 2.5rem;
+}
+.comments .show-comments .user {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.comments .show-comments .user img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.comments .show-comments .user h3 {
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 0.2rem;
+}
+.comments .show-comments .user span {
+  color: var(--light-color);
+  font-size: 1.5rem;
+}
+.comments .show-comments .text {
+  border-radius: 0.5rem;
+  background-color: var(--light-bg);
+  padding: 1rem 1.5rem;
+  color: var(--black);
+  margin: 0.5rem 0;
+  position: relative;
+  z-index: 0;
+  white-space: pre-line;
+  font-size: 1.8rem;
+}
+.comments .show-comments .text::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 1.5rem;
+  height: 1.2rem;
+  width: 2rem;
+  background-color: var(--light-bg);
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
 .footer {
   position: sticky;
   bottom: 0;

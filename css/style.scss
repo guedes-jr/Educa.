@@ -961,6 +961,360 @@ section {
   }
 }
 
+// teachers
+.teachers {
+  .search-tutor {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+
+    input {
+      width: 100%;
+      font-size: 1.8rem;
+      color: var(--black);
+      background: none;
+    }
+
+    button {
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--black);
+      background: none;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    .box {
+      border-radius: .5rem;
+      padding: 2rem;
+      background-color: var(--white);
+
+      .tutor {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+
+        h3 {
+          color: var(--black);
+          font-size: 2rem;
+          margin-bottom: .2rem;
+        }
+
+        img {
+          height: 5rem;
+          width: 5rem;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        span {
+          color: $main-color;
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        padding-top: 1rem;
+        font-size: 1.7rem;
+        color: var(--light-color);
+
+        span {
+          color: $main-color;
+        }
+      }
+    }
+
+    .offer {
+      text-align: center;
+
+      h3 {
+        font-size: 2rem;
+        color: var(--black);
+      }
+
+      p {
+        line-height: 2;
+        padding-bottom: .5rem;
+      }
+    }
+  }
+}
+
+// tutor-profile
+.tutor-profile {
+  .details {
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+
+    .tutor {
+      margin-bottom: 2rem;
+
+      img {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: .5rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        color: var(--black);
+        margin: .5rem 0;
+      }
+
+      span {
+        font-size: 1.5rem;
+        color: var(--light-color);
+      }
+    }
+
+    .flex {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+
+      p {
+        flex: 1 1 25rem;
+        border-radius: .5rem;
+        background-color: var(--light-bg);
+        padding: 1rem 3rem;
+        font-size: 2rem;
+        color: var(--light-color);
+
+        span {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+// contact
+.contact {
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    .image {
+      flex: 1 1 50rem;
+
+      img {
+        height: 50rem;
+        width: 100%;
+      }
+    }
+
+    form {
+      flex: 1 1 30rem;
+      background-color: var(--white);
+      border-radius: .5rem;
+      padding: 2rem;
+      text-align: center;
+
+      h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--black);
+      }
+
+      .box {
+        width: 100%;
+        margin: 1rem 0;
+        border-radius: .5rem;
+        background-color: var(--light-bg);
+        padding: 1.4rem;
+        color: var(--black);
+        font-size: 1.8rem;
+      }
+
+      textarea {
+        height: 20rem;
+        resize: none;
+      }
+    }
+  }
+
+  .box-container {
+    margin-top: 3rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    .box {
+      flex: 1 1 30rem;
+      border-radius: .5rem;
+      background-color: var(--white);
+      padding: 2rem;
+
+      i {
+        font-size: 3rem;
+        color: $main-color;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        color: var(--black);
+      }
+
+      a {
+        display: block;
+        font-size: 1.7rem;
+        color: var(--light-color);
+        line-height: 1.5;
+        margin-top: .5rem;
+
+        &:hover {
+          text-decoration: underline;
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+// profile
+.profile {
+  .details {
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+
+    .user {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      h3 {
+        font-size: 2rem;
+        margin: .5rem 0;
+        color: var(--black);
+      }
+
+      img {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: .5rem;
+      }
+
+      p {
+        font-size: 1.7rem;
+        color: var(--light-color);
+      }
+    }
+
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 1.5rem;
+
+      .box {
+        background-color: var(--light-bg);
+        border-radius: .5rem;
+        padding: 2rem;
+        flex: 1 1 30rem;
+
+        .flex {
+          display: flex;
+          align-items: center;
+          gap: 1.7rem;
+          margin-bottom: 1rem;
+
+          i {
+            height: 4.5rem;
+            width: 4.5rem;
+            border-radius: .5rem;
+            background-color: var(--black);
+            line-height: 4.4rem;
+            font-size: 2rem;
+            color: var(--white);
+            text-align: center;
+          }
+
+          h3 {
+            font-size: 2rem;
+            color: $main-color;
+            margin-bottom: .2rem;
+          }
+
+          span {
+            font-size: 1.5rem;
+            color: var(--light-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+// form-container
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 20rem);
+
+  form {
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+    width: 50rem;
+
+    h3 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+
+    }
+
+    p {
+      padding-top: 1rem;
+      font-size: 1.7rem;
+      color: var(--light-color);
+
+      span {
+        color: $red;
+      }
+    }
+
+    .box {
+      width: 100%;
+      border-radius: .5rem;
+      margin: 1rem 0;
+      font-size: 1.8rem;
+      color: var(--black);
+      padding: 1.4rem;
+      background-color: var(--light-bg);
+    }
+  }
+}
+
 // footer
 .footer {
   position: sticky;
@@ -1060,6 +1414,16 @@ section {
 
   .playlist .row .col .thumb {
     height: 20rem;
+  }
+
+  .contact {
+    .row {
+      .image {  
+        img {
+          height: auto;
+        }
+      }
+    }
   }
 }
 

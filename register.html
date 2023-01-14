@@ -60,6 +60,23 @@
     </nav>
   </div>
 
+  <section class="form-container">
+    <form action="" method="post" enctype="multipart/form-data">
+      <h3>Cadastrar-se</h3>
+      <p>Seu nome <span>*</span></p>
+      <input type="text" name="name" placeholder="Digite seu nome..." maxlength="100" class="box" required>
+      <p>Seu e-mail <span>*</span></p>
+      <input type="email" name="email" placeholder="Digite seu e-mail..." maxlength="100" class="box" required>
+      <p>Sua senha <span>*</span></p>
+      <input type="password" name="pass" placeholder="Digite sua senha..." maxlength="50" class="box" required>
+      <p>Confirme sua senha <span>*</span></p>
+      <input type="password" name="confirm_pass" placeholder="Confirme sua senha..." maxlength="50" class="box" required>
+      <p>Selecione uma foto de perfil</p>
+      <input type="file" name="image" accept="image/*" class="box" required>
+      <input type="submit" name="submit" value="Cadastrar" class="btn">
+    </form>
+  </section>
+
   <footer class="footer">
     &copy; copyright @ 2023 by <span>guedes-jr</span> | Todos os direitos reservados!
   </footer>

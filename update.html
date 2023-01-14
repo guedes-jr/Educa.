@@ -60,6 +60,25 @@
     </nav>
   </div>
 
+  <section class="form-container">
+    <form action="" method="post" enctype="multipart/form-data">
+      <h3>Atualizar Perfil</h3>
+      <p>Seu nome</p>
+      <input type="text" name="name" placeholder="Maria" maxlength="100" class="box">
+      <p>Seu e-mail</p>
+      <input type="email" name="email" placeholder="maria@educa.com.br" maxlength="100" class="box">
+      <p>Sua senha atual</p>
+      <input type="password" name="old_pass" placeholder="Digite sua senha atual..." maxlength="50" class="box">
+      <p>Sua nova senha</p>
+      <input type="password" name="new_pass" placeholder="Digite sua nova senha..." maxlength="50" class="box">
+      <p>Confirme sua nova senha</p>
+      <input type="password" name="confirm_pass" placeholder="Confirme sua nova senha..." maxlength="50" class="box">
+      <p>Atualizar foto de perfil</p>
+      <input type="file" name="image" accept="image/*" class="box">
+      <input type="submit" name="submit" value="Atualizar perfil" class="btn">
+    </form>
+  </section>
+
   <footer class="footer">
     &copy; copyright @ 2023 by <span>guedes-jr</span> | Todos os direitos reservados!
   </footer>
